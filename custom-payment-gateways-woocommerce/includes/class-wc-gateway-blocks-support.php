@@ -122,6 +122,21 @@ final class WC_Gateway_Blocks_Support extends AbstractPaymentMethodType {
 	 */
 	public function get_payment_method_data() {
 		$require = $this->get_setting( 'input_fields_required_1' );
+		$title   = $this->get_setting( 'input_fields_title_1' );
+	
+		//  Return no fields if title is empty
+		if ( empty( $title ) ) {
+			return array(
+				'icon'           => $this->get_setting( 'icon' ),
+				'title'          => $this->get_setting( 'title' ),
+				'description'    => $this->get_setting( 'description' ),
+				'total_gateways' => apply_filters( 'alg_wc_custom_payment_gateways_values', 2, 'total_gateways' ),
+				'supports'       => $this->get_supported_features(),
+				'fields'         => [], // ← empty array
+			);
+		}
+	
+		//  Otherwise, return full data
 		return array(
 			'icon'           => $this->get_setting( 'icon' ),
 			'title'          => $this->get_setting( 'title' ),
@@ -130,7 +145,7 @@ final class WC_Gateway_Blocks_Support extends AbstractPaymentMethodType {
 			'supports'       => $this->get_supported_features(),
 			'fields'         => array(
 				array(
-					'label'       => 'yes' === $require ? $this->get_setting( 'input_fields_title_1' ) . '*' : $this->get_setting( 'input_fields_title_1' ),
+					'label'       => 'yes' === $require ? $title . '*' : $title,
 					'required'    => 'yes' === $require ? true : false,
 					'type'        => $this->get_setting( 'input_fields_type_1' ),
 					'placeholder' => $this->get_setting( 'input_fields_placeholder_1' ),
@@ -139,7 +154,6 @@ final class WC_Gateway_Blocks_Support extends AbstractPaymentMethodType {
 					'options'     => $this->convert_newline_to_array( $this->get_setting( 'input_fields_options_1' ) ),
 				),
 			),
-
 		);
 	}
 
@@ -166,6 +180,12 @@ final class WC_Gateway_Blocks_Support extends AbstractPaymentMethodType {
 				$context->order->save();
 			endif;
 		endif;
+
+		if ( property_exists( $context, 'order' ) && 'alg_custom_gateway_1' === $context->order->get_payment_method() ) {
+			$total_orders = (int)get_option( 'img_cpg_orders', 0 );
+			$total_orders++;
+			update_option( 'img_cpg_orders', $total_orders );
+		}
 	}
 
 	/**

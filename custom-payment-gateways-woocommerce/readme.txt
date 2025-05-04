@@ -1,10 +1,10 @@
 === Custom Payment Gateways for WooCommerce ===
 Contributors: imagisol, dhruvin
-Tags: woocommerce, custom payment, payment gateway, woocommerce payment, other payment, woocommerce custom payment gateway, other payment gateway, other gateway, accept payments, payments, payment, gateway, gateways, custom, custom payment gateways
+Tags: woocommerce, custom payment, payment gateway, woocommerce checkout blocks, woocommerce payment, manual payment, other payment, woocommerce custom payment gateway, other payment gateway, other gateway, accept payments, payments, payment, gateway, gateways, custom, custom payment gateways
 Requires at least: 4.4
 Requires PHP: 5.6
-Tested up to: 6.7
-Stable tag: 2.0.0
+Tested up to: 6.8
+Stable tag: 2.1.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,45 +12,47 @@ Custom payment gateways for WooCommerce - create custom payment gateways to neve
 
 == Description ==
 
-**[Custom Payment Gateways for WooCommerce](https://imaginate-solutions.com/downloads/custom-payment-gateways-for-woocommerce/)** plugin lets you add your own customizable payment gateway to WooCommerce.
+**[Custom Payment Gateways for WooCommerce](https://imaginate-solutions.com/downloads/custom-payment-gateways-for-woocommerce/)** lets you easily create and manage your own manual or offline WooCommerce payment gateways without any code.
 
-More than 40% customers will abandon a purchase if their favourite payment method isn't available. Never miss out on these sales and recover additional revenue by offering alternative payment methods on your WooCommerce stores. While there could be other payment gateways but many of the payment providers do not have any payment gateway for WooCommerce.
+Over 40% of customers abandon checkout if their preferred payment method isn’t available. Never miss out on these sales and recover additional revenue by offering alternative payment methods on your WooCommerce stores.
+
+This plugin is perfect if your preferred payment provider doesn’t have a WooCommerce gateway. You can now support bank transfers, local wallets, in-person payments, and much more.
 
 Now create those additional payment methods for WooCommerce using **Custom Payment Gateways for WooCommerce**.
 
-For the custom payment gateway you can set:
+**🧩 Compatible with WooCommerce Checkout Blocks**
 
-- Title
-- Description
-- Instructions
-- Email instructions
-- Icon
-- Enable for shipping methods
-- Accept for virtual orders
-- Default WooCommerce Order Status
-- Send Additional WooCommerce Emails
-- Custom return URL (Thank You page)
-- **Input field to collect data on WooCommerce Checkout page**
-- **Gateway fee** - Add Fees or provide Discounts
+Seamlessly integrate your custom payment gateways into the modern block-based WooCommerce Checkout experience.
+
+= Features =
+
+Create fully functional WooCommerce custom gateways with settings for:
+
+- ✅ Payment Gateway Title, Description, and Icon
+- ✅ Checkout & Email Instructions
+- ✅ Enable for selected Shipping Methods
+- ✅ Support Virtual/Downloadable Products
+- ✅ Custom Return URL (Thank You page)
+- ✅ Default Order Status
+- ✅ Trigger Additional Emails
+- ✅ **Add a Custom Input Field to Collect Info at Checkout**
+- ✅ **Add Gateway Fees (or Discounts)**
 
 > I used this to create a gateway using Zelle, Apple Pay, Gpay and many others. Worked like a charm. I hit a snag on a Woo update and support was all over it. Awesome plugin.
 > 
 > Works like charm and support rocks
 > [abossola](https://wordpress.org/support/topic/works-like-charm-and-support-rocks/)
 
-= Compatible with WooCommerce block-based checkout =
-
-Custom Payment Gateways for WooCommerce is now compatible with WooCommerce Checkout Blocks. This allows you to use the modern checkout experience and enable customized payment gateway option.
-
 = Premium Version =
 
 With [Pro version](https://imaginate-solutions.com/downloads/custom-payment-gateways-for-woocommerce/) you can:
 
-- Add multiple payment gateways - Create unlimited payment gateways on your WooCommerce store.
-- Add multiple input fields - Create unlimited input fields on your WooCommerce Checkout page under payment gateway options to capture necessary details.
-- Add multiple fees.
-- Set a Minimum WooCommerce Order amount for which the WooCommerce Custom Payment Gateway must appear.
-- Set a Maximum WooCommerce Order amount for which the WooCommerce Custom Payment Gateway must not appear for checkout.
+- 🔄 Add multiple payment gateways - Create unlimited payment gateways on your WooCommerce store.
+- 🧾 Add multiple input fields - Create unlimited input fields on your WooCommerce Checkout page under payment gateway options to capture necessary details.
+- 💸 Add multiple fees or discounts.
+- 🛒 Set a Minimum WooCommerce Order amount for which the WooCommerce Custom Payment Gateway must appear.
+- 🛒 Set a Maximum WooCommerce Order amount for which the WooCommerce Custom Payment Gateway must not appear for checkout.
+- ✨ Additional placeholders for instructions and Custom URL's
 
 = Our other plugins =
 
@@ -88,6 +90,9 @@ With [Pro version](https://imaginate-solutions.com/downloads/custom-payment-gate
 9. Configure input fields for gateways.
 
 == Changelog ==
+
+= 2.1.0 - 04/05/2025 =
+* Fixed an issue related to placeholder and label overlapping with WooCommerce Checkout Blocks.
 
 = 2.0.0 - 23/12/2024 =
 * Compatibility with Checkout Blocks - Custom Payment Gateways are now available with Checkout Blocks
