@@ -3,7 +3,7 @@ Contributors: imagisol, dhruvin
 Tags: woocommerce, custom payment, payment gateway, woocommerce checkout blocks, woocommerce payment, manual payment, other payment, woocommerce custom payment gateway, other payment gateway, other gateway, accept payments, payments, payment, gateway, gateways, custom, custom payment gateways
 Requires at least: 4.4
 Requires PHP: 5.6
-Tested up to: 6.8
+Tested up to: 6.9
 Stable tag: 2.1.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
